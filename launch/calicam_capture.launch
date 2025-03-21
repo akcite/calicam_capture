@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="usb_port" default="0" />
+  <arg name="image_width" default="2560" />
+  <arg name="image_height" default="960" />
+  
+  <node name="calicam_capture" pkg="calicam" type="calicam_capture" output="screen">
+    <param name="usb_port" value="$(arg usb_port)" />
+    <param name="image_width" value="$(arg image_width)" />
+    <param name="image_height" value="$(arg image_height)" />
+  </node>
+</launch>
